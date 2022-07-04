@@ -8,6 +8,7 @@ Image augmentation can be simply described as any image processing method that m
 	* Zoom
 
 ## Compilation and Build
-	* OpenMP: make omp
+
+* ### OpenMP: make omp
 
 
