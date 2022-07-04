@@ -1,5 +1,5 @@
-all:
-	g++ -fopenmp horiz_vert_flip_soln.cpp
+omp:
+	g++ -fopenmp src/OpenMP/horiz_vert_flip_soln.cpp
 
 clean:
 	$(RM) a.out
