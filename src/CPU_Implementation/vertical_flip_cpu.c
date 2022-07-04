@@ -25,7 +25,7 @@ void vertical_flip_image(unsigned char *flip_img,unsigned char *img,int height,i
 int main(void) {
 	int width, height, channels;
 	int original_channels;
-	const char *fname = "high_res_images/high_res.jpg";
+	const char *fname = "../../res/high_res.jpg";
 	stbi_info(fname, &width, &height, &channels);
 
 	unsigned char *img = stbi_load(fname, &width, &height, &original_channels, channels);

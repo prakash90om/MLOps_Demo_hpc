@@ -24,7 +24,7 @@ __global__ void vertical_flip_image(unsigned char* vertical_flip_img,unsigned ch
 int main(void) {
 	int width, height, channels;
 	int original_channels;
-	const char *fname = "high_res_images/high_res.jpg";
+	const char *fname = "../../res/high_res.jpg";
 	stbi_info(fname, &width, &height, &channels);
 
 	unsigned char *img = stbi_load(fname, &width, &height, &original_channels, channels);
@@ -53,7 +53,7 @@ int main(void) {
 	cudaMemcpy(d_img, img, sizeof(unsigned char)*img_size, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_vertical_flip_img, vertical_flip_img, sizeof(unsigned char)*img_size, cudaMemcpyHostToDevice);
 	
-	int NUM_THREADS = 4;
+	int NUM_THREADS = 32;
 	dim3 threadsPerBlock(NUM_THREADS, NUM_THREADS);
 
 	dim3 blocksPerGrid(ceil(double(width/NUM_THREADS)), ceil(double(height/NUM_THREADS)));
