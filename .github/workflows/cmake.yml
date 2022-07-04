@@ -13,10 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install CUDA
+    - name: Install Cuda
       run: |
 	chmod +x ./install_cuda.sh
 	./install_cuda.sh
+
       shell: bash
        
     - name: make
