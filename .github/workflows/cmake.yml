@@ -14,8 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install Cuda
+      env:
+        cuda: "11.3"
       run: chmod +x ./install_cuda.sh;./install_cuda.sh
-
       shell: bash
        
     - name: make
