@@ -8,6 +8,7 @@
 #include "../../include/stb_image_write.h"
 
 
+
 __global__ void vertical_flip_image(unsigned char* vertical_flip_img,unsigned char* img,int height,int width)
 {
 	int col = threadIdx.x + blockDim.x * blockIdx.x;
