@@ -61,9 +61,12 @@ int main(int argc, char ** argv) {
 
 	gettimeofday(&t1,0);
 
+	#pragma omp parallel for
 	//Flip Vertically the given image
-	for (int i = 0, j = height-1; i < height; i++, j--) {
-		for (int k = 0, l = width-1; k < width; k++, l--) {
+	for (int i = 0; i < height; i++) {
+		for (int k = 0; k < width; k++) {
+			int j = height-1-i;
+			int l = width-1-k;
 			flip_img[3 * (i * width + k) + 0] = img[3 * (j * width + k) + 0];
 			flip_img[3 * (i * width + k) + 1] = img[3 * (j * width + k) + 1];
 			flip_img[3 * (i * width + k) + 2] = img[3 * (j * width + k) + 2];
