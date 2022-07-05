@@ -1,3 +1,5 @@
+[![C/C++ CI](https://github.com/prakash90om/MLOps_HPC_Image_Processing/actions/workflows/cmake.yml/badge.svg?branch=main&event=push)](https://github.com/prakash90om/MLOps_HPC_Image_Processing/actions/workflows/cmake.yml)
+
 # Introduction (Image Augmentation)
 Image augmentation can be simply described as any image processing method that makes our dataset larger. To create more images for example, we could flip, rotate, zoom the input image and save a result.
 
