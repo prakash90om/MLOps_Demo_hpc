@@ -4,11 +4,11 @@ on:
   push:
     branches: [ "main" ]
     paths-ignore:
-      - 'docs/**'
+      - 'doc/**'
   pull_request:
     branches: [ "main" ]
     paths-ignore:
-      - 'docs/**'
+      - 'doc/**'
 
 jobs:
   build:
